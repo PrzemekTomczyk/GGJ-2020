@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour
+public class Movement2 : MonoBehaviour
 {
     Rigidbody m_rb;
 
@@ -20,24 +20,26 @@ public class MovementScript : MonoBehaviour
         m_rotationSpeed = 150f;
         m_direction = transform.rotation;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
         // Rotate the object
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(Vector3.up * m_rotationSpeed * Time.deltaTime);
+            m_maxVelocity = 14f;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(-Vector3.up * m_rotationSpeed * Time.deltaTime);
+            m_maxVelocity = 14f;
         }
         else
         {
             m_maxVelocity = 15f;
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         { // move forward
             m_velocity = m_maxVelocity;
 

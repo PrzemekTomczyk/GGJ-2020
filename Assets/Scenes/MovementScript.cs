@@ -9,16 +9,16 @@ public class MovementScript : MonoBehaviour
     float m_velocity;
     public float m_maxVelocity;
     public float m_rotationSpeed;
-    Quaternion m_direction;
+    public float m_initialVelocity;
 
     // Start is called before the first frame update
     void Start()
     {
         m_rb = GetComponent<Rigidbody>();
         m_velocity = 0f;
-        m_maxVelocity = 15f;
+        m_initialVelocity = 3f;
+        m_maxVelocity = 13f;
         m_rotationSpeed = 150f;
-        m_direction = transform.rotation;
     }
     
     // Update is called once per frame
@@ -33,18 +33,29 @@ public class MovementScript : MonoBehaviour
         {
             transform.Rotate(-Vector3.up * m_rotationSpeed * Time.deltaTime);
         }
-        else
-        {
-            m_maxVelocity = 15f;
-        }
+
         if (Input.GetKey(KeyCode.UpArrow))
         { // move forward
-            m_velocity = m_maxVelocity;
+            if (m_velocity < m_maxVelocity)
+            {
+                m_velocity += 1f;
+            }
 
             Vector3 velocity = transform.rotation * Vector3.forward;
             velocity *= m_velocity;
 
             m_rb.velocity = Vector3.Lerp(m_rb.velocity, velocity, Time.deltaTime);
+        }
+        else
+        {
+            if (m_velocity > m_initialVelocity)
+            { // decriment the velocity if its greater than the initial 
+                m_velocity -= 1f;
+            }
+            else // if it goes below it make it equal
+            {
+                m_velocity = m_initialVelocity;
+            }
         }
 
     }

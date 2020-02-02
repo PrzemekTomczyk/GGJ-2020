@@ -147,6 +147,17 @@ public class GameDevSlave : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (m_workType != SlaveWorkType.Work && m_workType != SlaveWorkType.Finished)
+            {
+
+            }
+        }
+    }
+
     private void RollIfGameBreaks()
     {
         int randomNum = Random.Range(0, 10000);

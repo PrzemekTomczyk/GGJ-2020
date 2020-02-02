@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Screens.unity
+    guid: 116f6f4a7fc15f04188386971908e09b
+  - enabled: 1
+    path: Assets/Scenes/Przemek_Sandbox.unity
+    guid: f22086260be70614e96470bc5bffaa28
+  - enabled: 1
+    path: Assets/Scenes/PlayerSelection.unity
+    guid: e2066c662c5570547919fdd4990c36bd
   m_configObjects: {}

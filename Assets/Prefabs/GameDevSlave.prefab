@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1420558835785825784}
   - component: {fileID: 1420558835785825783}
   - component: {fileID: 114521770882193310}
+  - component: {fileID: 8989968973362413866}
   m_Layer: 0
   m_Name: GameDevSlave
   m_TagString: Untagged
@@ -107,6 +108,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447259321d1c7394e9d7131cb9809fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_rotation: 0
+  m_maxLeftRotation: 0
+  m_maxRightRotation: 0
+  canvasRectT: {fileID: 0}
+  m_linearBar: {fileID: 6457550947660635094, guid: 60b0a5dbde92c6e44a6c00e7508d25b9,
+    type: 3}
+  m_radialBar: {fileID: 7996691738449990441, guid: 477290db04501ed4a8c6dff52a652634,
+    type: 3}
+--- !u!136 &8989968973362413866
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420558835785825782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.7715094
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.018841028}
 --- !u!1 &2294731427245578075
 GameObject:
   m_ObjectHideFlags: 0

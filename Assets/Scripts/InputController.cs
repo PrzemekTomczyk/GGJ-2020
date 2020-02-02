@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InputController : MonoBehaviour
 {
     // Start is called before the first frame update
-    //publi
+    public GameObject m_player1;
+    public GameObject m_player2;
+    public GameObject m_player3;
+    public GameObject m_player4;
 
 
 
@@ -28,19 +32,54 @@ public class InputController : MonoBehaviour
                 if(Input.GetKey((KeyCode.Joystick1Button0)))
                 {
                     print("join 1");
+                    m_player1.GetComponent<Image>().color = new Color(0, 0, 0,255);
                 }
                 if (Input.GetKey((KeyCode.Joystick2Button0)))
                 {
                     print("join 2");
+                    m_player2.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+
                 }
                 if (Input.GetKey((KeyCode.Joystick3Button0)))
                 {
                     print("join 3");
+                    m_player3.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+
                 }
                 if (Input.GetKey((KeyCode.Joystick4Button0)))
                 {
+
                     print("join 4");
+                    m_player4.GetComponent<Image>().color = new Color(0, 0, 0, 255);
+
                 }
+
+
+                if (Input.GetKey((KeyCode.Joystick1Button1)))
+                {
+                    print("join 1");
+                    m_player1.GetComponent<Image>().color = new Color(255, 255,255, 255);
+                }
+                if (Input.GetKey((KeyCode.Joystick2Button1)))
+                {
+                    print("join 2");
+                    m_player2.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+
+                }
+                if (Input.GetKey((KeyCode.Joystick3Button1)))
+                {
+                    print("join 3");
+                    m_player3.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+
+                }
+                if (Input.GetKey((KeyCode.Joystick4Button1)))
+                {
+
+                    print("join 4");
+                    m_player4.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+
+                }
+
                 //  print(i.ToString());
             }
 

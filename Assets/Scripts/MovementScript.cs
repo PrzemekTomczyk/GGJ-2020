@@ -16,9 +16,19 @@ public class MovementScript : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody>();
         m_velocity = 0f;
-        m_initialVelocity = 3f;
-        m_maxVelocity = 13f;
-        m_rotationSpeed = 150f;
+
+        if (m_initialVelocity == 0.0f)
+        {
+            m_initialVelocity = 3f; 
+        }
+        if (m_maxVelocity == 0.0f)
+        {
+            m_maxVelocity = 13f; 
+        }
+        if (m_rotationSpeed == 0.0f)
+        {
+            m_rotationSpeed = 150f; 
+        }
     }
     
     // Update is called once per frame
@@ -35,7 +45,8 @@ public class MovementScript : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
-        { // move forward
+        { 
+            // move forward
             if (m_velocity < m_maxVelocity)
             {
                 m_velocity += 1f;

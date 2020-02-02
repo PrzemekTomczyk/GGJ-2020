@@ -111,11 +111,13 @@ MonoBehaviour:
   m_rotation: 0
   m_maxLeftRotation: 0
   m_maxRightRotation: 0
-  canvasRectT: {fileID: 0}
-  m_linearBar: {fileID: 6457550947660635094, guid: 60b0a5dbde92c6e44a6c00e7508d25b9,
-    type: 3}
+  m_workType: 0
   m_radialBar: {fileID: 7996691738449990441, guid: 477290db04501ed4a8c6dff52a652634,
     type: 3}
+  m_workColour: {r: 0, g: 0.72210264, b: 1, a: 1}
+  m_bugColour: {r: 1, g: 0.805087, b: 0, a: 1}
+  m_boostColour: {r: 0.049563408, g: 1, b: 0, a: 1}
+  m_errorColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!136 &8989968973362413866
 CapsuleCollider:
   m_ObjectHideFlags: 0

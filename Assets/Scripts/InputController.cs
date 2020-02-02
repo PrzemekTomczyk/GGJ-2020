@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InputController : MonoBehaviour
 {
@@ -21,11 +22,11 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 330; i < 349; i++)
+      //  for (int i = 330; i < 349; i++)
         {
             // TEST TO GET CONTROLLER INFO
             //string keycode = "KeyCode.JoystickButton" + i;
-            if (Input.GetKey((KeyCode)i))
+            //if (Input.GetKey((KeyCode)i))
             {
                 //KeyCode.JoystickButton0 // if anny press a
 
@@ -80,7 +81,16 @@ public class InputController : MonoBehaviour
 
                 }
 
-                //  print(i.ToString());
+
+                if (Input.GetKey((KeyCode.Joystick1Button7)))
+                {
+
+                    print("start game");
+                    SceneManager.LoadScene("Przemek_Sandbox", LoadSceneMode.Single);
+
+                }
+
+
             }
 
         }
